@@ -1,0 +1,36 @@
+{
+  "name": "contentful-vue-image-renderer",
+  "version": "0.0.1",
+  "scripts": {
+    "build": "npm run build:umd & npm run build:es & npm run build:unpkg",
+    "test:unit": "vue-cli-service test:unit test/**/*.spec.js",
+    "lint": "vue-cli-service lint",
+    "build:es": "rollup --config build/rollup.config.js --format es --file dist/contentful-vue-image-renderer.esm.js",
+    "build:umd": "rollup --config build/rollup.config.js --format umd --file dist/contentful-vue-image-renderer.umd.js",
+    "build:unpkg": "rollup --config build/rollup.config.js --format iife --file dist/contentful-vue-image-renderer.min.js",
+    "test:dev": "vue-cli-service test:unit test/**/*.spec.js -w"
+  },
+  "main": "dist/contentful-vue-image-renderer.umd.js",
+  "module": "dist/contentful-vue-image-renderer.esm.js",
+  "browser": {
+    "./sfc": "src/contentful-vue-image-renderer.vue"
+  },
+  "unpkg": "dist/contentful-vue-image-renderer.min.js",
+  "devDependencies": {
+    "@rollup/plugin-buble": "^0.21.3",
+    "@rollup/plugin-commonjs": "^11.1.0",
+    "@vue/cli-plugin-eslint": "^4.5.4",
+    "@vue/cli-plugin-unit-mocha": "^4.5.4",
+    "@vue/cli-service": "^4.5.4",
+    "@vue/eslint-config-airbnb": "^5.0.2",
+    "@vue/test-utils": "^1.0.4",
+    "chai": "^4.2.0",
+    "eslint": "^6.7.2",
+    "eslint-plugin-import": "^2.20.2",
+    "eslint-plugin-vue": "^6.2.2",
+    "rollup": "^1.17.0",
+    "rollup-plugin-vue": "^5.0.1",
+    "vue": "^2.6.10",
+    "vue-template-compiler": "^2.6.10"
+  }
+}
