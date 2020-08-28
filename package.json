@@ -1,21 +1,21 @@
 {
-  "name": "contentful-vue-image-renderer",
+  "name": "contentful-vue-media-renderer",
   "version": "0.0.1",
   "scripts": {
     "build": "npm run build:umd & npm run build:es & npm run build:unpkg",
     "test:unit": "vue-cli-service test:unit test/**/*.spec.js",
     "lint": "vue-cli-service lint",
-    "build:es": "rollup --config build/rollup.config.js --format es --file dist/contentful-vue-image-renderer.esm.js",
-    "build:umd": "rollup --config build/rollup.config.js --format umd --file dist/contentful-vue-image-renderer.umd.js",
-    "build:unpkg": "rollup --config build/rollup.config.js --format iife --file dist/contentful-vue-image-renderer.min.js",
+    "build:es": "rollup --config build/rollup.config.js --format es --file dist/contentful-vue-media-renderer.esm.js",
+    "build:umd": "rollup --config build/rollup.config.js --format umd --file dist/contentful-vue-media-renderer.umd.js",
+    "build:unpkg": "rollup --config build/rollup.config.js --format iife --file dist/contentful-vue-media-renderer.min.js",
     "test:dev": "vue-cli-service test:unit test/**/*.spec.js -w"
   },
-  "main": "dist/contentful-vue-image-renderer.umd.js",
-  "module": "dist/contentful-vue-image-renderer.esm.js",
+  "main": "dist/contentful-vue-media-renderer.umd.js",
+  "module": "dist/contentful-vue-media-renderer.esm.js",
   "browser": {
-    "./sfc": "src/contentful-vue-image-renderer.vue"
+    "./sfc": "src/contentful-vue-media-renderer.vue"
   },
-  "unpkg": "dist/contentful-vue-image-renderer.min.js",
+  "unpkg": "dist/contentful-vue-media-renderer.min.js",
   "devDependencies": {
     "@rollup/plugin-buble": "^0.21.3",
     "@rollup/plugin-commonjs": "^11.1.0",

@@ -1,11 +1,11 @@
 // Import vue component
-import ContentfulVueImageRenderer from './ContentfulVueMediaRenderer.vue';
+import ContentfulVueMediaRenderer from './ContentfulVueMediaRenderer.vue';
 
 // Declare install function executed by Vue.use()
 export function install(Vue) {
   if (install.installed) return;
   install.installed = true;
-  Vue.component('contentful-vue-media-renderer', ContentfulVueImageRenderer);
+  Vue.component('contentful-vue-media-renderer', ContentfulVueMediaRenderer);
 }
 
 // Create module definition for Vue.use()
@@ -25,4 +25,4 @@ if (GlobalVue) {
 }
 
 // To allow use as module (npm/webpack/etc.) export component
-export default ContentfulVueImageRenderer;
+export default ContentfulVueMediaRenderer;
